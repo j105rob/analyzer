@@ -57,3 +57,7 @@ target/
 _build/
 _resources/
 logs/
+.lein-deps-sum
+src/streamparse/
+.project
+.pydevproject

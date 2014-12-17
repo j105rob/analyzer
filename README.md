@@ -3,6 +3,8 @@ analyzer
 
 Analyzer for Dumpmon
 
+Built using streamparse for storm, this project attempts to run the dumpmon data through an analytics platform to develop a better understanding of the data that dumpmon has collected.
+
 ##### Installing Streamparse Development Environment
 ----------------------------------------------
 
@@ -29,15 +31,15 @@ sudo pip install streamparse
 Check it:
 
 ```script
-ubuntu@twitterbot:~$ java -version
+java -version
 java version "1.7.0_65"
 OpenJDK Runtime Environment (IcedTea 2.5.3) (7u71-2.5.3-0ubuntu0.14.04.1)
 OpenJDK 64-Bit Server VM (build 24.65-b04, mixed mode)
 
-ubuntu@twitterbot:~$ lein version
+lein version
 Leiningen 1.7.1 on Java 1.7.0_65 OpenJDK 64-Bit Server VM
 
-ubuntu@twitterbot:~$ python --version
+python --version
 Python 2.7.6
 
 ```
@@ -50,3 +52,27 @@ wget http://mirror.cc.columbia.edu/pub/software/apache/storm/apache-storm-0.9.3/
 tar -xvf apache-storm-0.9.3.tar.gz
 
 ```
+
+Install Kafka
+
+```script
+  wget http://apache.mirrors.hoobly.com/kafka/0.8.1.1/kafka_2.9.2-0.8.1.1.tgz
+  tar -xzf kafka_2.9.2-0.8.1.1.tgz 
+  cd kafka_2.9.2-0.8.1.1
+```
+
+Start Zookeeper then Kafka (typically I start these in separate screens)
+
+```script
+bin/zookeeper-server-start.sh config/zookeeper.properties 
+bin/kafka-server-start.sh config/server.properties
+
+```
+
+
+
+
+
+
+
+
